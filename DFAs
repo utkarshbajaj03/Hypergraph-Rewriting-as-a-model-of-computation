@@ -1,1 +1,0 @@
-alphabetGraphHelper[n_]:= If[n ==0, {{1,1},{1,2}},If[n==1,{{1,2},{2,1}}, Module[{x},x = Last[#][[1]]&[alphabetGraphHelper[n-1]]; Join[Drop[#,-1],{{x,x+1},{x+1,1}}]&\[IndentingNewLine][alphabetGraphHelper[n-1]]]]] 
